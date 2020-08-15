@@ -35,7 +35,7 @@ const User = props => {
 		var redPremissionValue = e.target.checked;
 		axios({
 			method: 'post',
-			url: 'https://quotenstories.herokuapp.com/updatePermissions',
+			url: 'https://quotenstories.herokuapp.com/user/updatePermissions',
 			data: {
 			  userId:e.target.getAttribute("dataid"),
 			  redButton: redPremissionValue,

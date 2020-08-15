@@ -16,6 +16,7 @@ const User = props => {
 						method: 'post',
 						url: 'https://quotenstories.herokuapp.com/user/getPermissions',
 						data: {
+								token: JSON.parse(localStorage.user).token,
 								userId: props.user._id
 						}
 		}).then(response => {
@@ -54,6 +55,7 @@ const User = props => {
 			method: 'post',
 			url: 'https://quotenstories.herokuapp.com/user/updatePermissions',
 			data: {
+			  token: JSON.parse(localStorage.user).token,
 			  userId:e.target.getAttribute("dataid"),
 			  redButton: prem.red,
 			  greenButton: greenPremissionValue

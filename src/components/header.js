@@ -17,7 +17,7 @@ const Header = props => {
           props.userLoggedIn ? (
             props.role === 'admin' ? (
               <>
-              <Button className="bg-warning" >RedButton</Button>
+              <Button className="bg-danger" >RedButton</Button>
               <Button className="bg-success">GreenButton</Button>
               </>
             ):"")
@@ -41,7 +41,7 @@ const Header = props => {
           props.userLoggedIn && props.role === "customer" ? (
             props.prem.red === true ? (
               <>
-               <Button className="bg-warning">RedButton</Button>
+               <Button className="bg-danger">RedButton</Button>
                </>
             ) : ""
           ):""

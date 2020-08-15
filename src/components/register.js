@@ -22,6 +22,7 @@ const Register = () => {
     if(!validator.validate(user.email))
     {
       alert("Please enter correct email!")
+      return;
     }
     let data = {}
     axios({

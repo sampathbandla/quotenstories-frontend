@@ -2,6 +2,7 @@ import React,{ useState } from "react";
 import { Button,Form,FormGroup,Label,Input } from 'reactstrap';
 import {useHistory } from "react-router-dom";
 const axios = require('axios');
+var validator = require("email-validator");
 
 const Register = () => {
   let history = useHistory();
@@ -13,6 +14,15 @@ const Register = () => {
   });
   
   const registerOnClick = () => {
+    if(user.email == "" || user.password  == "")
+    {
+      alert("Please enter email and password!")
+      return;
+    }
+    if(!validator.validate(user.email))
+    {
+      alert("Please enter correct email!")
+    }
     let data = {}
     axios({
       method: 'post',

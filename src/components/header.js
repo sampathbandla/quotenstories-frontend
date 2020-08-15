@@ -17,8 +17,8 @@ const Header = props => {
           props.userLoggedIn ? (
             props.role === 'admin' ? (
               <>
-              <Button >RedButton</Button>
-              <Button >GreenButton</Button>
+              <Button className="bg-warning" >RedButton</Button>
+              <Button className="bg-success">GreenButton</Button>
               </>
             ):"")
           : (
@@ -32,7 +32,7 @@ const Header = props => {
           props.userLoggedIn && props.role === "customer" ? (
             props.prem.green === true ? (
               <>
-              <Button>GreenButton</Button>
+              <Button className="bg-success">GreenButton</Button>
               </>
             ): ""
           ):""
@@ -41,7 +41,7 @@ const Header = props => {
           props.userLoggedIn && props.role === "customer" ? (
             props.prem.red === true ? (
               <>
-               <Button>RedButton</Button>
+               <Button className="bg-warning">RedButton</Button>
                </>
             ) : ""
           ):""

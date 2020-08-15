@@ -37,6 +37,7 @@ const User = props => {
 			method: 'post',
 			url: 'https://quotenstories.herokuapp.com/user/updatePermissions',
 			data: {
+			  token: JSON.parse(localStorage.user).token,
 			  userId:e.target.getAttribute("dataid"),
 			  redButton: redPremissionValue,
 			  greenButton: prem.green

@@ -11,7 +11,7 @@ const UserList = () => {
 		const lStorage = JSON.parse(localStorage.getItem("user"));
 		axios({
 			method: 'post',
-			url: 'http://127.0.0.1:5000/user/getcustomerlist',
+			url: 'https://quotenstories.herokuapp.com/user/getcustomerlist',
 			data: {
 				token: lStorage.token
 			}

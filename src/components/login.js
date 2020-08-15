@@ -14,7 +14,7 @@ const Login = () => {
     let data = {};
     axios({
       method: 'post',
-      url: 'http://127.0.0.1:5000/user/login',
+      url: 'https://quotenstories.herokuapp.com/user/login',
       data: {
         email: user.email,
         password: user.password
@@ -32,8 +32,6 @@ const Login = () => {
           token: response.data.token,
           ...response.data.USER
         }
-        // return;
-        // console.log(response);
       }
         
     }).then(() => {
@@ -52,12 +50,11 @@ const Login = () => {
       {
         axios({
           method: 'post',
-          url: 'http://127.0.0.1:5000/user/getLoggedUserPermissions',
+          url: 'https://quotenstories.herokuapp.com/user/getLoggedUserPermissions',
           data: {
             userId:data._id
           }
         }).then(response => {
-          // console.log(response);
           data = {
             ...data,
             greenButton: response.data.USER.greenButton,

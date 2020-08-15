@@ -8,7 +8,6 @@ const Header = props => {
     localStorage.clear();
     window.location.reload()
   }
-  console.log(props)
   return (
     <Navbar color="dark" dark expand="sm">
         <NavbarBrand href="/">Auth</NavbarBrand>

@@ -14,7 +14,7 @@ const User = props => {
 		setToggleCheckbox(!toggleCheckbox);   
 		axios({
 						method: 'post',
-						url: 'http://127.0.0.1:5000/user/getPermissions',
+						url: 'https://quotenstories.herokuapp.com/user/getPermissions',
 						data: {
 								userId: props.user._id
 						}
@@ -32,17 +32,15 @@ const User = props => {
 			red: e.target.checked
 		});
 		var redPremissionValue = e.target.checked;
-		// console.log(redPremissionValue);
 		axios({
 			method: 'post',
-			url: 'http://127.0.0.1:5000/user/updatePermissions',
+			url: 'https://quotenstories.herokuapp.com/updatePermissions',
 			data: {
 			  userId:e.target.getAttribute("dataid"),
 			  redButton: redPremissionValue,
 			  greenButton: prem.green
 			}
 		  }).then(response => {
-			// console.log(response);
 		})
 	}
 
@@ -52,17 +50,15 @@ const User = props => {
 			green: e.target.checked
 		});
 		var greenPremissionValue = e.target.checked;
-		// console.log(redPremissionValue);
 		axios({
 			method: 'post',
-			url: 'http://127.0.0.1:5000/user/updatePermissions',
+			url: 'https://quotenstories.herokuapp.com/user/updatePermissions',
 			data: {
 			  userId:e.target.getAttribute("dataid"),
 			  redButton: prem.red,
 			  greenButton: greenPremissionValue
 			}
 		  }).then(response => {
-			// console.log(response);
 		})
 	}
 

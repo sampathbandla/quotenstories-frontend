@@ -16,7 +16,7 @@ const Register = () => {
     let data = {}
     axios({
       method: 'post',
-      url: 'http://127.0.0.1:5000/user/register',
+      url: 'https://quotenstories.herokuapp.com/user/register',
       data: {
         email: user.email,
         password: user.password,
@@ -32,7 +32,7 @@ const Register = () => {
 
       axios({
         method: 'post',
-        url: 'http://127.0.0.1:5000/user/getLoggedUserPermissions',
+        url: 'https://quotenstories.herokuapp.com/user/getLoggedUserPermissions',
         data: {
           userId:data._id
         }

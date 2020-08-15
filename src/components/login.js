@@ -22,7 +22,7 @@ const Login = () => {
     }).then(response => {
       if(response.data.ERROR)
       {
-        alert("Wrong Password!")
+        alert(response.data.ERROR)
         data.error = true;
         return;
       }
